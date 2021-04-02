@@ -4,7 +4,7 @@ const range = (start, end) => {
 }
 function longest_balanced_span(V){
     let best = [];
-    let sum_elem_in_V, min, max = 0;
+    let sum_elem_in_V;
     for(let s = 0; s < V.length; s++) {
         sum_elem_in_V = V[s]; //always start with [s, n)
         for(let e = s + 1; e <= V.length; e++) {
