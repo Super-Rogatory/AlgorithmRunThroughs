@@ -36,7 +36,9 @@ function telegraph_style_string(s){
     }
     // END THE STRING WITH 'STOP.'
     // presumed edge case of 'stop.'
-    if(s_prime.slice(s_prime.length - 5, s_prime.length).toLowerCase() === 'stop.') return s_prime;
+    if(s_prime.length >= 5){
+        if(s_prime.slice(s_prime.length - 5, s_prime.length).toLowerCase() === 'stop.') return s_prime;
+    }
     return s_prime + 'STOP.';
 }
 
